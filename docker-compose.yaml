@@ -1,0 +1,16 @@
+version : "3"
+services:
+  mongows:
+    image: "mongo:latest"
+    container_name: mongows
+    restart: "on-failure"
+    environment:
+      mavariable: "temp"
+  
+  nodews:
+    image: "node:latest"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "C:\\Users\\kanik\\Documents\\WebApplications\\WP6:/data"
+    command: tail -f /dev/null
