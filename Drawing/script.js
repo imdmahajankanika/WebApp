@@ -15,6 +15,11 @@ addEventListener('load', () => {
   let input = document.getElementById('username')
   input.value = ''
 })
+addEventListener('resize', () => {
+    canvas.width = document.getElementById("drawingbox").clientWidth;
+    canvas.height = document.getElementById("drawingbox").clientHeight;
+    reLoadFigs()
+})
 
 function registerUser(){
     let input = document.getElementById('username')
