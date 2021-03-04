@@ -25,7 +25,7 @@ function registerUser(){
     let input = document.getElementById('username')
     let display_btn = document.getElementById('display')
     let user_message = document.getElementById('user_message')
-    document.getElementById("drawingbox").style.backgroundClip="white"
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     if(input.value.length >= 6){
         
         //Unlock display button
@@ -37,7 +37,7 @@ function registerUser(){
     else{
         if(display_btn.disabled == false){ display_btn.disabled = true }
         username = input.value
-        user_message.innerHTML = `You are no longer registered. Register to be able to see your drawings`
+        user_message.innerHTML = `username didn't match length criteria! Please register with username length >= 6`
         reLoadFigs()
     }
 }
