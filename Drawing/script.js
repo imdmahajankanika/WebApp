@@ -82,7 +82,7 @@ function drawTriangle(figSize = parseInt(document.getElementById('figureSize').v
       ctx.closePath();
       ctx.lineWidth = borderSize;
       ctx.fill();
-      ctx.strokeStyle=background_color;
+      ctx.strokeStyle=border_color;
       ctx.stroke();
 
     let triangle = {
